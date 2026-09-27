@@ -1,5 +1,9 @@
 -- Tienda Blockbuster Reborn
 
+DROP DATABASE IF EXISTS blockbusterReborn;
+
+-- Base de dato Blockbuster Reborn
+
 CREATE DATABASE blockbusterReborn;
 USE blockbusterReborn;
 
@@ -50,3 +54,57 @@ FOREIGN KEY (idRenta) REFERENCES renta(idRenta),
 idPelicula INT,
 FOREIGN KEY (idPelicula) REFERENCES pelicula(idPelicula)
 );
+
+-- Insertar datos
+
+INSERT INTO sucursal (nombreSucursal)
+VALUES 
+('Sucursal norte'),
+('Sucursal centro'),
+('Sucursal sur');
+
+INSERT INTO cliente (nombreCompleto, correoElectronico)
+VALUES
+('María Camila Gómez', 'mcamilag@email.com'),
+('Andrés Felipe Martínez', 'afelipem@email.com'),
+('Laura Valentina Palacio', 'lvalentinap@email.com'),
+('Tanaka Masahiro', 'tanakam@email.com'),
+('Santiago Díaz Jaramillo', 'sdiazj@email.com');
+
+INSERT INTO genero (nombreGenero)
+VALUES
+('Ciencia Ficción'),
+('Aventura'),
+('Fantasía'),
+('Acción'),
+('Drama');
+
+INSERT INTO pelicula (titulo, anioEstreno, idGenero)
+VALUES
+('Star Wars I', 1999, 1),
+('Godzilla 2000', 2000, 2),
+('Harry Potter 3', 2004, 3),
+('Top Gun Maverick', 2022, 4),
+('Ford vs Ferrari', 2019, 5);
+
+INSERT INTO empleado (nombreEmpleado, idSucursal)
+VALUES
+('Ciro Alfonso Guerra', 1),
+('Cristina Gallego', 2),
+('Natalia Reyes Gaitán', 3),
+('Juan Pablo Raba Vidal', 1),
+('Víctor Gaviria', 2);
+
+INSERT INTO renta (fechaRenta, idCliente, idEmpleado)
+VALUES
+('2026-01-10', 1, 1),
+('2026-02-12', 2, 2),
+('2026-04-15', NULL, 3), -- renta express
+('2026-08-18', 4, NULL); -- renta kiosko
+
+INSERT INTO detalleRenta (idRenta, idPelicula)
+VALUES
+(1, 1),   -- renta 1, Star Wars I
+(1, 2),   -- renta 1, Godzilla 2000
+(2, 3),   -- renta 2, Harry Potter 3
+(3, 4);   -- renta 3(express), Top Gun Maverick
