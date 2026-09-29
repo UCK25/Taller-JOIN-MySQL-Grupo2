@@ -1,4 +1,4 @@
-# 📊 Resultados de las consultas – Blockbuster Reborn
+# Resultados de las consultas – Blockbuster Reborn
 
 Salidas obtenidas al ejecutar `2_consultas.sql` en MySQL Workbench sobre los datos de prueba de `1_esquema_y_datos.sql`.
 
