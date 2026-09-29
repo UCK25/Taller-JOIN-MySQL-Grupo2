@@ -100,6 +100,9 @@ El primer script elimina la base de datos si ya existe (`DROP DATABASE IF EXISTS
 - Git y GitHub
 - Mermaid (diagrama entidad-relación renderizado por GitHub)
 
-## 👩‍💻 Autora
+## Integrantes
 
-Laura – Universidad Central
+- Ken Kagehira Kagehira
+- Laura Valentina Beltran Rios
+- Jean Marco Herrera Torres
+- Dana Valentina Sánchez Fandiño
